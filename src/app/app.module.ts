@@ -12,6 +12,7 @@ import { SharedModule } from './shared/shared.module';
 
 
 import { DemoLayoutComponent } from './AppLayout/demo-layout.component';
+import { LeftMenuComponent } from './main/left-menu/left-menu.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { DemoLayoutComponent } from './AppLayout/demo-layout.component';
     AppComponent,
     routedComponents,
     DemoLayoutComponent,
+    LeftMenuComponent,
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     AppRoutingModule,
