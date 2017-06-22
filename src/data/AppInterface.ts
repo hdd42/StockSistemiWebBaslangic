@@ -48,3 +48,15 @@ export interface IAppAlert{
 }
 
 /** Alert INTERFACE END*/
+
+
+
+/** Menu Interface */
+
+ export interface IMenu{
+   route:string,
+   title:string,
+  icon?:string
+}
+
+/** Menu INTERFACE END **/

@@ -10,17 +10,14 @@ import { routedComponents, AppRoutingModule } from './app-routing.module';
 
 import { SharedModule } from './shared/shared.module';
 
+import {MenuService} from "./services/menu.service";
 
-import { DemoLayoutComponent } from './AppLayout/demo-layout.component';
-import { LeftMenuComponent } from './main/left-menu/left-menu.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    routedComponents,
-    DemoLayoutComponent,
-    LeftMenuComponent,
+    routedComponents
   ], // directives, components, and pipes owned by this NgModule
   imports: [
     AppRoutingModule,
@@ -30,7 +27,7 @@ import { LeftMenuComponent } from './main/left-menu/left-menu.component';
 
   ], // modules needed to run this module
   providers: [
-
+    MenuService
   ], // additional providers needed for this module
   entryComponents: [ ],
   bootstrap: [ AppComponent ],

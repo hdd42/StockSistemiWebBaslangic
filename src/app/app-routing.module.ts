@@ -5,7 +5,6 @@ import {MainComponent} from "./main/main.component";
 
 import {LoginComponent} from "./login/login.component";
 
-import {DemoLayoutComponent} from "./AppLayout/demo-layout.component";
 
 const routes: Routes = [
   {
@@ -16,16 +15,7 @@ const routes: Routes = [
 
   {
     path: '',
-    component: DemoLayoutComponent,
-    children: [
-
-      {
-        path: '',
-        component: DemoLayoutComponent
-      },
-
-      //{path: '', loadChildren: './users/users.module#UsersModule'},
-    ],
+    component: LoginComponent,
   },
 ];
 

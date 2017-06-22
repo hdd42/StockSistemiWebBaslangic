@@ -1,6 +1,8 @@
 import {ChangeDetectorRef, Component} from '@angular/core';
 import { Router } from '@angular/router';
 import {TdMediaService} from "@covalent/core";
+import {IMenu} from "../../data/AppInterface";
+import {MenuService} from "../services/menu.service";
 
 @Component({
   selector: 'app-main',
@@ -9,27 +11,13 @@ import {TdMediaService} from "@covalent/core";
 })
 export class MainComponent {
 
-  routes: Object[] = [{
-      title: 'Dashboard',
-      route: '/',
-      icon: 'dashboard',
-    }, {
-      title: 'Product Dashboard',
-      route: '/product',
-      icon: 'view_quilt',
-    }, {
-      title: 'Product Logs',
-      route: '/logs',
-      icon: 'receipt',
-    }, {
-      title: 'Manage Users',
-      route: '/users',
-      icon: 'people',
-    },
-  ];
+  routes: Array<IMenu> ;
 
   constructor(private _router: Router,  private _changeDetectorRef: ChangeDetectorRef,
-              public media: TdMediaService) {}
+              public media: TdMediaService , _menuService:MenuService) {
+
+    this.routes = _menuService.getMenu()
+  }
 
   logout(): void {
     this._router.navigate(['/login']);
